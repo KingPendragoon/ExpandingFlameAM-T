@@ -13,7 +13,6 @@ Make sure telesto is on /telesto
 
 ![alt text](https://github.com/KingPendragoon/JobPrioGaolTelesto/blob/main/Telesto.png?raw=true)
 
-If you would like to test if the triggers work before you go into the fight you will need to make a macro with the following text make sure the line ends with a line break `|`
 
 
 **Editing**
