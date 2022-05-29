@@ -17,7 +17,7 @@ Make sure telesto is on /telesto
 
 **Editing**
 If you wish to edit the priority list you will need to go into each of the triggers 
-Job1Priority-Job3Priority and change the numbers assigned to them there
+Job1Priority-Job4Priority and change the numbers assigned to them there
 
 RPR: 01
   
