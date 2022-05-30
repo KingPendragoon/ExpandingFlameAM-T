@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="618b2a68-4663-498b-b0c4-85265443d384" Name="GaolButActuallyNidhogg-T" Enabled="false">
+  <ExportedFolder Id="618b2a68-4663-498b-b0c4-85265443d384" Name="GaolButActuallyNidhogg-T" Enabled="true">
     <Folders />
     <Triggers>
       <Trigger Enabled="true" Sequential="True" Name="Job2Priority" Id="33d7cf3a-9ca1-48bf-ae0c-823cd43c25e0" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="Job2Prio">
@@ -105,7 +105,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="MarkerPriority" Id="50ad2b2d-21e3-4353-920c-5f17e1ab4124" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="MarkerPrio">
         <Actions>
@@ -146,7 +145,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="WipeResetGaolVar" Id="97406f59-9ce6-44c8-9d4f-6b5c6a7c73b5" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|10)\|">
         <Actions>
@@ -188,7 +186,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Players and Jobs" Id="5b4b86b8-f240-46c4-8301-68e93ea53d47" RegularExpression="^26\|[^|]*\|AC6\|[^|]*\|[^|]*\|[^|]*\|\|[^|]*\|(?&lt;name&gt;[^|]*)" PeriodRefire="Deny" MutexToCapture="StartStop">
         <Actions>
@@ -246,7 +243,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Job1Priority" Id="0c3b7024-7241-450f-aeef-0c0712fc2576" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="Job1Prio">
         <Actions>
@@ -350,7 +346,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Job4Priority" Id="b361415e-566a-4582-9c8b-0346ba0ef187" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="Job3Prio">
         <Actions>
@@ -454,7 +449,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="GetJobs" Id="8c2243db-c15c-46ec-ac37-29696f2955ae" RegularExpression="" PeriodRefire="Deny" MutexToCapture="GetJobs">
         <Actions>
@@ -623,7 +617,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Job3Priority" Id="fa223f88-6687-4999-a0d8-5b46fd34ab1e" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="Job3Prio">
         <Actions>
@@ -727,12 +720,10 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" IsReadme="True" Name="$ReadMe$V1.0" Id="2674f114-7408-4382-8093-7cbb0a2591c7" RegularExpression="" Description="Set up to use Keyattacks Macros F1-F9.  Same set up as the uwu Gaol triggers">
+      <Trigger Enabled="true" Source="FFXIVNetwork" IsReadme="True" Name="$ReadMe$V1.01" Id="2674f114-7408-4382-8093-7cbb0a2591c7" RegularExpression="" Description="Set up to use Keyattacks Macros F1-F9.  Same set up as the uwu Gaol triggers">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark1" Id="6bbf2deb-bc03-4ad4-a1b5-e8c59bd615e5" RegularExpression="">
         <Actions>
@@ -781,7 +772,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark2" Id="c2ce7252-2c99-4fac-a5b8-9534f5ed302f" RegularExpression="">
         <Actions>
@@ -830,7 +820,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark3" Id="6002aeb0-72ed-4d47-bc4a-fd9b781cb33a" RegularExpression="">
         <Actions>
@@ -879,7 +868,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark4" Id="0c2349fd-9bde-43db-818b-922f65c250a9" RegularExpression="">
         <Actions>
@@ -928,9 +916,8 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="None" Sequential="True" Name="Telesto GetPartyMembers" Id="d5e7df8b-a862-417d-a819-07df0c6ce9ce" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|6D45">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Telesto GetPartyMembers" Id="d5e7df8b-a862-417d-a819-07df0c6ce9ce" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|6D45">
         <Actions>
           <Action OrderNumber="1" JsonResultVariable="TelestoPartyMembers" JsonEndpointExpression="http://localhost:51323" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
             <Condition Enabled="false" Grouping="Or" />
@@ -967,7 +954,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
