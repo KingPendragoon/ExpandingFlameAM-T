@@ -135,7 +135,7 @@
           <Action OrderNumber="9" LogMessageText="Marker4 ${func:substring(2):${lvar:JobPrio[4]}}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4d80feb3-fb41-4c10-b3e4-83744956d2bb" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6bbf2deb-bc03-4ad4-a1b5-e8c59bd615e5" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${evar:Marker1Priority}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:Marker2Priority}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -925,31 +925,34 @@
           <Action OrderNumber="2" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" LogMessageText="${_responsecode}" LogLevel="Verbose" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="3" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyJob" VariableExpression="$.response[*].job" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" LogMessageText="Player 1: ${lvar:TelestoPartyMembers[1]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="4" LogMessageText="${_responsecode}" LogLevel="Verbose" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" LogMessageText="Player 2: ${lvar:TelestoPartyMembers[2]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="5" LogMessageText="Player 1: ${lvar:TelestoPartyMembers[1]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" LogMessageText="Player 3: ${lvar:TelestoPartyMembers[3]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="6" LogMessageText="Player 2: ${lvar:TelestoPartyMembers[2]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="7" LogMessageText="Player 4: ${lvar:TelestoPartyMembers[4]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="7" LogMessageText="Player 3: ${lvar:TelestoPartyMembers[3]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="8" LogMessageText="Player 5: ${lvar:TelestoPartyMembers[5]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="8" LogMessageText="Player 4: ${lvar:TelestoPartyMembers[4]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="9" LogMessageText="Player 6: ${lvar:TelestoPartyMembers[6]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="9" LogMessageText="Player 5: ${lvar:TelestoPartyMembers[5]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" LogMessageText="Player 7: ${lvar:TelestoPartyMembers[7]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="10" LogMessageText="Player 6: ${lvar:TelestoPartyMembers[6]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="11" LogMessageText="Player 8: ${lvar:TelestoPartyMembers[8]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="11" LogMessageText="Player 7: ${lvar:TelestoPartyMembers[7]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="12" LogMessageText="Player 8: ${lvar:TelestoPartyMembers[8]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
