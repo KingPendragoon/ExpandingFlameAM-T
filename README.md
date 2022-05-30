@@ -1,4 +1,4 @@
-V1.0-T
+V1.02-T
 **This version does not use macros thanks to the Telesto plugin**
 
 **Set Up**
