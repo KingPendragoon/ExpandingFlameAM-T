@@ -1,4 +1,4 @@
-V1.03-T
+V1.04-T
 **This version does not use macros thanks to the Telesto plugin**
 
 **Set Up**
@@ -17,7 +17,7 @@ Make sure telesto is on /telesto
 
 **Editing**
 If you wish to edit the priority list you will need to go into each of the triggers 
-Job1Priority-Job4Priority and change the numbers assigned to them there
+JobPrioLoop and change the numbers assigned to them there
 
 RPR: 01
   
