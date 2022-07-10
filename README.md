@@ -1,4 +1,4 @@
-V1.04-T
+V1.0-T
 **This version does not use macros thanks to the Telesto plugin**
 
 **Set Up**
@@ -28,31 +28,31 @@ DRG: 03
 NIN: 04 
  
 SAM: 05 
- 
-PLD: 06 
- 
-WAR: 07 
- 
-DRK: 08 
- 
-GNB: 09  
 
-BRD: 10 
+BRD: 06
  
-MCH: 11 
+MCH: 07 
  
-DNC: 12 
+DNC: 08 
  
-BLM: 13 
+BLM: 09 
  
-SMN: 14 
+SMN: 10 
  
-RDM: 15 
+RDM: 11 
  
-WHM: 16 
+WHM: 12 
  
-SCH: 17 
+SCH: 13 
  
-AST: 18
+AST: 14
 
-SGE: 19
+SGE: 15
+
+PLD: 16 
+ 
+WAR: 17 
+ 
+DRK: 18 
+ 
+GNB: 19  
