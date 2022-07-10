@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="9e1227fd-7dfd-4683-9cc0-0b0ad3aab17b" Name="GaolButActuallyNidhogg-T" Enabled="true">
+  <ExportedFolder Id="6ca1e39c-18de-427a-bd74-55b799eeab85" Name="GaolButActuallyNidhogg-T" Enabled="true">
     <Folders />
     <Triggers>
-      <Trigger Enabled="true" Sequential="True" Name="MarkerPriority" Id="2762a2b5-15d4-49b9-beac-e2ccdafb4943" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="MarkerPrio">
+      <Trigger Enabled="true" Sequential="True" Name="MarkerPriority" Id="8f2d802b-489d-407a-89bd-08274f88b5d0" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="MarkerPrio">
         <Actions>
           <Action OrderNumber="1" ListVariableOp="SortAlphaAsc" ListVariableName="JobPrio" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
@@ -32,7 +32,7 @@
           <Action OrderNumber="9" LogMessageText="Marker4 ${func:substring(2):${lvar:JobPrio[4]}}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="67b607b0-dee2-41b3-9462-c8011d172db5" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="29be6c85-1254-496d-8130-255ac7ccf232" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${evar:Marker1Priority}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:Marker2Priority}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -42,9 +42,8 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="WipeResetGaolVar" Id="3b8cd8f3-d67a-48e7-9d30-2078d56d8423" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|10)\|">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="WipeResetGaolVar" Id="1443a589-83b3-4d4e-bc0d-0995297bd956" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|10)\|">
         <Actions>
           <Action OrderNumber="1" ListVariableName="ListCount" VariableName="Job1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
@@ -70,7 +69,7 @@
           <Action OrderNumber="8" ListVariableName="ListCount" VariableName="Marker4Priority" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="9" VariableName="Counter" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="9" VariableName="SFCounter" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="10" ListVariableName="MarkedPlayersList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
@@ -84,9 +83,8 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Players and Jobs" Id="08a0e528-2008-452e-9c54-6ddb6d7b555a" RegularExpression="^26\|[^|]*\|AC6\|[^|]*\|[^|]*\|[^|]*\|\|[^|]*\|(?&lt;name&gt;[^|]*)" PeriodRefire="Deny" MutexToCapture="StartStop">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Players and Jobs" Id="7e3a5707-bac9-42e0-98f0-d24d685ad71c" RegularExpression="^26\|[^|]*\|AC6\|[^|]*\|[^|]*\|[^|]*\|\|[^|]*\|(?&lt;name&gt;[^|]*)" PeriodRefire="Deny" MutexToCapture="StartStop">
         <Actions>
           <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="MarkedPlayersList" ListVariableExpression="${name}" VariableOp="SetString" VariableName="Name1" VariableExpression="${name}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or">
@@ -96,7 +94,7 @@
               <ConditionSingle Enabled="false" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:MarkedPlayersList[4]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="18b0a908-9c72-448a-ae0c-4efa1ed69a38" TriggerText="Job1Priority" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="e43ccaab-240f-4afa-9fd7-21f5c95fa0c9" TriggerText="Job1Priority" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:MarkedPlayersList.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
@@ -136,132 +134,129 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Sequential="True" Name="JobPrioLoop" Id="18b0a908-9c72-448a-ae0c-4efa1ed69a38" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="Job1Prio">
+      <Trigger Enabled="true" Sequential="True" Name="JobPrioLoop" Id="e43ccaab-240f-4afa-9fd7-21f5c95fa0c9" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="Job1Prio">
         <Actions>
           <Action OrderNumber="1" LoopDelayExpression="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Loop" Asynchronous="False">
             <LoopCondition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${var:Counter}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:SFCounter}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
             </LoopCondition>
             <LoopActions>
-              <Action OrderNumber="1" OBSEndPoint="" VariableOp="SetNumeric" VariableName="Counter" VariableExpression="${var:Counter}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="1" OBSEndPoint="" VariableOp="SetNumeric" VariableName="SFCounter" VariableExpression="${var:SFCounter}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="01${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="2" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="01${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="RPR" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="RPR" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="02${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="3" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="02${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="4" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="03${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="4" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="03${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="DRG" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="DRG" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="5" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="04${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="5" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="04${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="NIN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="NIN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="6" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="05${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="6" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="05${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="SAM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="SAM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="7" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="06${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="7" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="06${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="PLD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="BRD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="8" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="07${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="8" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="07${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="WAR" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="MCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="9" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="08${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="9" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="08${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="DRK" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="DNC" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="10" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="09${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="10" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="09${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="GNB" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="BLM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="11" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="10${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="11" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="10${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="BRD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="12" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="11${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="12" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="11${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="MCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="RDM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="13" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="12${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="13" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="12${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="DNC" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="14" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="13${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="14" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="13${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="BLM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="SCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="15" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="14${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="15" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="14${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="AST" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="16" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="15${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="16" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="15${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="RDM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="SGE" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="17" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="16${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="17" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="16${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="PLD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="18" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="17${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="18" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="17${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="SCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="WAR" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="19" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="18${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="19" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="18${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="AST" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="DRK" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="20" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="19${lvar:MarkedPlayersList[${var:Counter}]}" ListVariableIndex="${var:Counter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="20" ListVariableOp="Insert" ListVariableName="JobPrio" ListVariableExpression="19${lvar:MarkedPlayersList[${var:SFCounter}]}" ListVariableIndex="${var:SFCounter}" VariableOp="SetNumeric" VariableName="JobPrio" VariableExpression="1${lvar:MarkedPlayersList[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${var:Counter}]}" ExpressionTypeL="String" ExpressionR="SGE" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyJob[${lvar:TelestoPartyMembers.indexof(${lvar:MarkedPlayersList[${var:SFCounter}]})}]}" ExpressionTypeL="String" ExpressionR="GNB" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="21" LogMessageText="${lvar:JobPrio[${var:Counter}]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
+              <Action OrderNumber="21" LogMessageText="${lvar:JobPrio[${var:SFCounter}]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </LoopActions>
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2762a2b5-15d4-49b9-beac-e2ccdafb4943" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8f2d802b-489d-407a-89bd-08274f88b5d0" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" IsReadme="True" Name="$ReadMe$V1.04" Id="20aa8d96-eafc-4413-9eeb-240fa56676e1" RegularExpression="" Description="Set up to use Keyattacks Macros F1-F9.  Same set up as the uwu Gaol triggers">
+      <Trigger Enabled="true" Source="FFXIVNetwork" IsReadme="True" Name="$ReadMe$V1.05" Id="bc3a907f-12f6-458c-ba0d-430bf3f11b63" RegularExpression="" Description="Set up to use Keyattacks Macros F1-F9.  Same set up as the uwu Gaol triggers">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark1" Id="67b607b0-dee2-41b3-9462-c8011d172db5" RegularExpression="">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark1" Id="29be6c85-1254-496d-8130-255ac7ccf232" RegularExpression="">
         <Actions>
           <Action OrderNumber="1" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk attack &lt;1&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False" Description="Mark Player 1" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
@@ -303,14 +298,13 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:Marker1Priority}" ExpressionTypeL="String" ExpressionR="${lvar:TelestoPartyMembers[8]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f3815000-6ddd-4b5a-b7a2-12e15fce6286" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="300" Asynchronous="False">
+          <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4faab1cd-0f25-4852-9061-94039dd4a3b7" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="300" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark2" Id="f3815000-6ddd-4b5a-b7a2-12e15fce6286" RegularExpression="">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark2" Id="4faab1cd-0f25-4852-9061-94039dd4a3b7" RegularExpression="">
         <Actions>
           <Action OrderNumber="1" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk attack &lt;1&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False" Description="Mark Player 1" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
@@ -352,14 +346,13 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:Marker2Priority}" ExpressionTypeL="String" ExpressionR="${lvar:TelestoPartyMembers[8]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="cda8e11f-90f2-4aac-b264-8bd314f51272" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="300" Asynchronous="False">
+          <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="7f3e0ce7-de4d-4223-8e8d-402c67aaf5e1" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="300" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark3" Id="cda8e11f-90f2-4aac-b264-8bd314f51272" RegularExpression="">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark3" Id="7f3e0ce7-de4d-4223-8e8d-402c67aaf5e1" RegularExpression="">
         <Actions>
           <Action OrderNumber="1" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk attack &lt;1&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False" Description="Mark Player 1" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
@@ -401,14 +394,13 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:Marker3Priority}" ExpressionTypeL="String" ExpressionR="${lvar:TelestoPartyMembers[8]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9c27e44a-a322-46a4-baa7-a4b586e34e2e" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="300" Asynchronous="False">
+          <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="71770e20-8dcb-4221-b08d-4646c77abd4b" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="300" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark4" Id="9c27e44a-a322-46a4-baa7-a4b586e34e2e" RegularExpression="">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Mark4" Id="71770e20-8dcb-4221-b08d-4646c77abd4b" RegularExpression="">
         <Actions>
           <Action OrderNumber="1" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk attack &lt;1&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False" Description="Mark Player 1" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="And">
@@ -450,14 +442,13 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:Marker4Priority}" ExpressionTypeL="String" ExpressionR="${lvar:TelestoPartyMembers[8]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Action>
-          <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3b8cd8f3-d67a-48e7-9d30-2078d56d8423" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="23000" Asynchronous="False">
+          <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1443a589-83b3-4d4e-bc0d-0995297bd956" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="23000" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Telesto GetPartyMembers" Id="6ff5fd61-546c-4c41-b653-6f6736534b1a" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|6D45">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Telesto GetPartyMembers" Id="87cdcefb-ad62-47ea-b109-5c9b710a6b84" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|6D45">
         <Actions>
           <Action OrderNumber="1" JsonResultVariable="TelestoPartyMembers" JsonEndpointExpression="http://localhost:51323" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
             <Condition Enabled="false" Grouping="Or" />
@@ -497,7 +488,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
