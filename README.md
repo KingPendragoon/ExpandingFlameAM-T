@@ -1,4 +1,4 @@
-V1.05-T
+GaolButActuallyNidhogg-T V1.05-T
 **This version does not use macros thanks to the Telesto plugin**
 
 **Set Up**
@@ -16,8 +16,11 @@ Make sure telesto is on /telesto
 
 
 **Editing**
-If you wish to edit the priority list you will need to go into each of the triggers 
-JobPrioLoop and change the numbers assigned to them there
+If you wish to edit the priority list you will need to go into each of the triggers in 
+JobPrioLoop and change the numbers assigned to them there The lower the number the Higher the Prio
+Example if you wanted Reaper to always be last you would change it from 01 to 19 and change GNB from 19 to 01
+The 0's are important for the single digit numbers so do not forget them (01-09) all Prio should have 2 numbers.
+Their should only be one of each set of numbers. 
 
 RPR: 01
   
