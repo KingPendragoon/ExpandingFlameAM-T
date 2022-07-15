@@ -1,5 +1,7 @@
 GaolButActuallyNidhogg-T V1.05-T
 
+This is for Wroth of Flames Spread Debuff
+
 **This version does not use macros thanks to the Telesto plugin**
 
 **Set Up**
